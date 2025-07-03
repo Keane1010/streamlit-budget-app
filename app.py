@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
-import pytesseract
+import easyocr
+import numpy as np
 
 st.set_page_config(page_title="Bi‑Weekly Budget App", layout="wide")
 
@@ -12,8 +13,12 @@ uploaded_file = st.file_uploader("Upload a bank statement image", type=["png", "
 if uploaded_file:
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Bank Statement", use_column_width=True)
+
     with st.spinner("🔍 Extracting text with OCR..."):
-        extracted_text = pytesseract.image_to_string(image)
+        reader = easyocr.Reader(['en'])
+        result = reader.readtext(np.array(image), detail=0)
+        extracted_text = "\n".join(result)
+
     st.subheader("📝 Extracted Text")
     st.text(extracted_text)
     st.info("🔧 Auto-categorization, credit‑card & account tracking, and bi‑weekly graphs coming soon!")

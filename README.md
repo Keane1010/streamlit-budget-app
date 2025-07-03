@@ -5,7 +5,7 @@ A simple Streamlit app to upload bank statements, extract transaction text with 
 ## Features
 
 - Upload scanned bank statement images
-- Perform OCR using pytesseract
+- Perform OCR using easyocr (compatible with Streamlit Cloud)
 - Display extracted text
 - Future: categorize, graph, and track credit cards and accounts
 

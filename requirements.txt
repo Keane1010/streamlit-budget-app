@@ -1,3 +1,5 @@
 streamlit
 pillow
-pytesseract
+easyocr
+torch
+typing_extensions
