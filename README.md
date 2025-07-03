@@ -1,22 +1,21 @@
-# Bi‑Weekly Budget Web App
+# Advanced Bi‑Weekly Budget App
 
-A simple Streamlit app to upload bank statements, extract transaction text with OCR, and build toward a bi‑weekly budgeting tool.
+Track expenses from uploaded bank statements using OCR and auto-categorization.
 
 ## Features
 
-- Upload scanned bank statement images
-- Perform OCR using easyocr (compatible with Streamlit Cloud)
-- Display extracted text
-- Future: categorize, graph, and track credit cards and accounts
+- Upload statement images
+- Extract transactions using EasyOCR
+- Auto-categorize by keyword
+- View by bi-weekly pay periods
+- Graphs: Pie + Bar Charts
+- Export to CSV
 
-## Deployment
+## Deploy
 
-Deploy on [Streamlit Cloud](https://streamlit.io/cloud):
-
-1. Push this repo to GitHub
-2. Go to https://share.streamlit.io/deploy
-3. Enter:
-   - Repository: your-username/streamlit-budget-app
+1. Upload to GitHub
+2. Deploy at https://share.streamlit.io/deploy
+3. Use:
+   - Repo: your-username/streamlit-budget-app
    - Branch: main
-   - Main file path: app.py
-4. Click Deploy
+   - Main file: app.py

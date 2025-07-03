@@ -3,3 +3,5 @@ pillow
 easyocr
 torch
 typing_extensions
+pandas
+plotly
